@@ -83,4 +83,7 @@ true指向 `@babel/rutime`
 plugin-transform-runtime做了三件事情：
 
 - 如果指定了regenerator则为需要的polyfill提供一个沙盒
-- 如过指定
+- 如过指定helpers则helper函数指向了`@babel/runtime/helpers`
+- 使用core-js引用需要的polyfill
+
+
