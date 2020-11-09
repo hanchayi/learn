@@ -3,8 +3,31 @@
 <head>
     <title></title>
     <style>canvas { width: 100%; height: 100% }</style>
+    <script src="three.js"></script>
+    <script>
+        let renderer
+        function onload() {
+            initThree()
+        }
+        function initThree() {
+            const canvasFrame = document.getElementById('canvas-frame')
+            const width = canvasFrame.clientWidth;
+            const height = canvasFrame.clientHeight;
+            renderer = new THREE.WebGLRender({
+                antialias: true
+            })
+            renderer.setSize(width, height);
+            canvasFrame.appendChild(renderer.domElement);
+            renderer.setClearColor(0xFFFFFF, 1.0);
+        }
+        let camera
+        function initCamera() {
+        }
+    </script>
 </head>
-<body>
-    <script src="https://raw.github.com/mrdoob/three.js/master/build/three.js"></script>
+<body onload=onload>
+    <div id='canvas-frame'>
+
+    </div>
 </body>
 </html>
