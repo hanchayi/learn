@@ -31,7 +31,8 @@ circleBtn.addEventListener('click', () => {
 
 // draw a triangle
 triangleBtn.addEventListener('click', () => {
-  import('./modules/triangle.js').then((Module) => {
+  const path = './modules/triangle.js'
+  import(path).then((Module) => {
     let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, 'yellow');
     triangle1.draw();
     triangle1.reportArea();
