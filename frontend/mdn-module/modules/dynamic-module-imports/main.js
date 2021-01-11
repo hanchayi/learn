@@ -31,7 +31,7 @@ circleBtn.addEventListener('click', () => {
 
 // draw a triangle
 triangleBtn.addEventListener('click', () => {
-  const path = './modules/triangle.js'
+  const path = '//pkg.oneitfarm.com/modules/dynamic-module-imports/modules/triangle.js'
   import(path).then((Module) => {
     let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, 'yellow');
     triangle1.draw();
